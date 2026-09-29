@@ -108,6 +108,5 @@ quote-style = 'single'
 
 [tool.pytest.ini_options]
 python_files = ["test_*.py"]
-addopts = "-v --reuse-db"
 testpaths = ["tests"]
 norecursedirs = '.venv'
