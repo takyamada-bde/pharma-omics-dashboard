@@ -39,7 +39,7 @@ dependencies = [
     "optuna",
     "hyperopt",
     "ray",
-    "torch --index-url https://download.pytorch.org/whl/cpu",
+    "torch",
     "networkx",
     "rdkit",
     "biopython",
@@ -60,6 +60,14 @@ dev = [
     "httpx",
     "zensical",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
 
 [tool.tox]
 legacy_tox_ini = """
