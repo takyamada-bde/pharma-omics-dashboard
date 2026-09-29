@@ -14,7 +14,7 @@ dependencies = [
     "pyvis",
 ]
 
-[dependency_groups]
+[dependency-groups]
 dev = [
     "black",
     "ruff",
@@ -47,11 +47,6 @@ legacy_tox_ini = """
     commands = mypy .
 """
 
-[tool.pytest.ini_options]
-python_files = ["test_*.py"]
-testpaths = ["tests"]
-norecursedirs = '.venv'
-
 [tool.ruff]
 lint.ignore = ['E501']
 lint.select = [
@@ -66,3 +61,8 @@ src = ['.']
 
 [tool.ruff.format]
 quote-style = 'single'
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py"]
+testpaths = ["tests"]
+norecursedirs = '.venv'
